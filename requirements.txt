@@ -1,7 +1,7 @@
 fastapi
 uvicorn
-python-multipart
-pillow
 opencv-python
+pillow
 numpy
+python-multipart
 gunicorn
