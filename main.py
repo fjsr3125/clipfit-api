@@ -27,6 +27,9 @@ app.add_middleware(
 async def merge(
     videos: List[UploadFile] = File(...),
     images: List[UploadFile] = File(...)
+    print("動画ファイル数:", len(videos))
+    print("画像ファイル数:", len(images))
+    print("保存完了:", video_paths, image_paths)
 ):
     temp_dir = tempfile.mkdtemp()
     output_files = []
