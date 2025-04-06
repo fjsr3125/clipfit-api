@@ -37,9 +37,12 @@ export default function Home() {
       setUploading(true)
       setMessage('アップロード中...')
 
-      const res = await fetch('https://clipfit-api.onrender.com/merge', {
+      const res = await fetch('http://localhost:8000/merge', {
         method: 'POST',
         body: formData,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
       })
 
       if (!res.ok) throw new Error('送信エラー')
